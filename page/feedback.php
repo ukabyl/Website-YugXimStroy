@@ -1,6 +1,6 @@
 <?php
 
-$site = "sbf.xsoft.kz";
+$site = "yugxs.xsoft.kz";
 $senderMail = "noreply.sbf.kz@gmail.com";
 $senderMailPass = "Password123123";
 $adminMail = "umkabylbekov@gmail.com";
