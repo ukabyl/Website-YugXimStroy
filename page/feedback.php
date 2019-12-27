@@ -1,7 +1,7 @@
 <?php
 
 $site = "yugxs.xsoft.kz";
-$senderMail = "noreply.yugxs.kz@mail.ru";
+$senderMail = "noreply.yugxs.kz@gmail.com";
 $senderMailPass = "Password123123";
 $adminMail = "umkabylbekov@gmail.com";
 
