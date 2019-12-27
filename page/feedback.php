@@ -36,8 +36,8 @@ if((isset($_POST['name'])&&$_POST['name']!="") && (isset($_POST['phone'])&&$_POS
     //Текст нащего сообщения можно использовать HTML теги
     $message =
         '<p>Имя: '.$_POST['name'].'</p>'.
-        '<p>Тариф: '.$_POST['tarif'].'</p>'.
-        '<p>Телефон: '.$_POST['phone'].'</p>';
+        '<p>Телефон: '.$_POST['phone'].'</p>'.
+        '<p>Email: '.$_POST['email'].'</p>';
 
     $mail->msgHTML($message); // текст сообщения
 
