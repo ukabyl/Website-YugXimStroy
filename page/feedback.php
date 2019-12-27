@@ -1,8 +1,8 @@
 <?php
 
 $site = "yugxs.xsoft.kz";
-$senderMail = "sender.mail@yandex.kz";
-$senderMailPass = "password";
+$senderMail = "noreply.yugxs.kz@gmail.com";
+$senderMailPass = "Password123123";
 $adminMail = "umkabylbekov@gmail.com";
 
 if((isset($_POST['name'])&&$_POST['name']!="") && (isset($_POST['phone'])&&$_POST['phone']!=""))
