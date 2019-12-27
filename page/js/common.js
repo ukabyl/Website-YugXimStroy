@@ -14,6 +14,8 @@ const vm = new Vue({
       });
       // *****************************************Anchor
 
+      $('.tel-mask').mask("+7(999) 999-9999");
+
       $('.callback-round__trigger').click(function() {
 		      $( this ).parent().toggleClass('active');
 		  })

@@ -41,6 +41,7 @@ gulp.task('scripts', function() {
 		'page/libs/vue/vue.min.js',
 		'page/libs/jquery/dist/jquery.min.js',
 		'page/libs/bootstrap/dist/js/bootstrap.min.js',
+		'page/libs/maskinput/maskinput.js',
 		'page/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
