@@ -1,0 +1,44 @@
+$default-font: "montserrat", sans-serif;
+$accent: #273db4;
+$text: #000;
+
+$speed: .3s;
+
+@mixin vertical-gradient {
+  background-color: #ffffff; // Old browsers
+	@include filter-gradient(#ffffff, #b4bbe4, vertical); // IE6-9
+	@include background-image(linear-gradient(top,  #ffffff 0%,#b4bbe4 100%));
+}
+
+@mixin bgSettings {
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+@mixin verticalGradientBg {
+  &:before{
+  	content: '';
+  	height: 100%;
+  	width: 100%;
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	z-index: 2;
+  	opacity: .1;
+  	background: rgba(180, 188, 228, 1.0);
+		background: -webkit-linear-gradient(bottom, rgba(180, 188, 228, 1.0), rgba(255, 255, 255, 1.0));
+		background: -moz-linear-gradient(bottom, rgba(180, 188, 228, 1.0), rgba(255, 255, 255, 1.0));
+		background: linear-gradient(to top, rgba(180, 188, 228, 1.0), rgba(255, 255, 255, 1.0));
+  }
+}
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1300px);
+
+$gutter: $grid-gutter-width;
