@@ -80,6 +80,8 @@
 			padding: .5rem 1rem;
 			font-size: .9rem;
 			width: 100%;
+			background: $accent;
+			color: #fff;
 			&:before{
 				content: none;
 			}
@@ -90,8 +92,7 @@
 				}
 			}
 			&.active{
-				background: $accent;
-				color: #fff;
+				
 				&:before{
 					
 				}
