@@ -86,8 +86,8 @@
 				content: none;
 			}
 			&:hover{
-				color: #000;
-				background: transparent;
+				color: #fff;
+				background: $accent;
 				&:before{
 				}
 			}
