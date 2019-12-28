@@ -30,6 +30,19 @@
 
 	<div id="page">
 
+		<div id="sidebar">
+			<span class="close-sidebar sidebar-trigger">&#10006;</span>
+		  <div id="sidebar-wrapper" class="sidebar-wrapper">
+		    <a class="close-sidebar" href="/">Главная</a>
+		    <a class="close-sidebar anchor" href="#production">Продукция</a>
+		    <a class="close-sidebar anchor" href="#advantages">Преимущества</a>
+		    <a class="close-sidebar anchor" href="#about">О заводе</a>
+		    <a class="close-sidebar anchor" href="#contact">Контакты</a>
+		  </div>
+		</div>
+
+			
+
 		<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 		    <div class="modal-content">
@@ -79,16 +92,16 @@
 							<a href="#" class="desktop-menu__link">Главная</a>
 						</li>
 						<li class="desktop-menu__item">
-							<a href="#" class="desktop-menu__link">Продукция</a>
+							<a href="#production" class="desktop-menu__link anchor">Продукция</a>
 						</li>
 						<li class="desktop-menu__item">
-							<a href="#" class="desktop-menu__link">Как заказать</a>
+							<a href="#advantages" class="desktop-menu__link anchor">Преимущества</a>
 						</li>
 						<li class="desktop-menu__item">
-							<a href="#" class="desktop-menu__link">О заводе</a>
+							<a href="#about" class="desktop-menu__link anchor">О заводе</a>
 						</li>
 						<li class="desktop-menu__item">
-							<a href="#" class="desktop-menu__link">Контакты</a>
+							<a href="#contact" class="desktop-menu__link anchor">Контакты</a>
 						</li>
 					</ul>
 					<div class="phone">
@@ -103,7 +116,7 @@
 					</div>
 				</div>
 				<div class="mobile-header d-flex d-lg-none">
-					<div class="sidebar-trigger hamburger d-block d-xl-none">
+					<div id="toggle-sidebar" class="hamburger d-block d-xl-none">
 						<div class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</div>
@@ -174,13 +187,13 @@
 			</div>
 		</main>
 
-		<section class="production">
+		<section id="production" class="production">
 			<div class="container">
-				<h2 class="title production__title d-none d-xl-block">
+				<h2 class="title production__title">
 					Продукция
 					<span class="title__line"></span>
 				</h2>
-				<ul class="production__tab production-tab d-none d-xl-flex">
+				<ul class="production__tab production-tab d-flex">
 					<li @click="product = 1" :class="{'active': product == 1}" class="production-tab__item">
 						<span>
 							Пластификатор
@@ -218,9 +231,6 @@
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-12 col-xl-6">
-								<h2 class="title production__title d-block d-xl-none">
-									Продукция
-								</h2>
 								<h2 class="product__category">
 									Пластификатор
 								</h2>
@@ -490,9 +500,41 @@
 					</div>
 				</div>
 			</div>
+			<ul class="production__tab production-tab d-xl-none d-flex">
+				<li @click="product = 1" :class="{'active': product == 1}" class="production-tab__item">
+					<span>
+						Пластификатор
+					</span>
+				</li>
+				<li @click="product = 2" :class="{'active': product == 2}" class="production-tab__item">
+					<span>
+						Пенообразователь
+					</span>
+				</li>
+				<li @click="product = 3" :class="{'active': product == 3}" class="production-tab__item">
+					<span>
+						Противоморозная добавка
+					</span>
+				</li>
+				<li @click="product = 4" :class="{'active': product == 4}" class="production-tab__item">
+					<span>
+						Пенообразователь
+					</span>
+				</li>
+				<li @click="product = 5" :class="{'active': product == 5}" class="production-tab__item">
+					<span>
+						Ускоритель
+					</span>
+				</li>
+				<li @click="product = 6" :class="{'active': product == 6}" class="production-tab__item">
+					<span>
+						Смазка для опалубки
+					</span>
+				</li>
+			</ul>
 		</section>
 
-		<section class="section about">
+		<section id="about" class="section about">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-lg-6 order-lg-0 order-1">
@@ -523,7 +565,7 @@
 			</div>
 		</section>
 
-		<section class="section advantages">
+		<section id="advantages" class="section advantages">
 			<div class="container">
 				<h2 class="title advantages__title">
 					Преимущества работы с нами
@@ -654,11 +696,11 @@
 	        	</a>
 	        </li>
 	    </ul>
-	</div>
+		</div>
 
 	</div>
 
-	<section class="map">
+	<section id="contact" class="map">
 			<div class="map__card">
 				<h2 class="title map__title">
 					Контакты
@@ -680,19 +722,19 @@
 			<div class="map__wrapper">
 				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa556ceb98f5334e52de7c598d817fd1a0e48bae4085209bd63e33450de70a247&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
 			</div>
-		</section>
+	</section>
 
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__block">
-					<a href="/" class="logo">ИП "ЮгХимСтрой"</a>
-					<a href="#main" class="up-btn anchor">
-						<img href="#main" class="up-btn__icon" src="img/up.png" align="Вверх"></img>
-						вверх
-					</a>
-				</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__block">
+				<a href="/" class="logo">ИП "ЮгХимСтрой"</a>
+				<a href="#main" class="up-btn anchor">
+					<img href="#main" class="up-btn__icon" src="img/up.png" alt="Вверх"></img>
+					вверх
+				</a>
 			</div>
-		</footer>
+		</div>
+	</footer>
 
 	
 

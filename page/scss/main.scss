@@ -64,6 +64,32 @@ a{
 	}
 }
 
+#sidebar{
+	background: $accent;
+	position: relative;
+	.sidebar-trigger{
+		color: #fff;
+		font-size: 1rem;
+		position: absolute;
+		top: 5px;
+		right: 15px;
+	}
+	.sidebar-wrapper{
+		padding: 3rem 15px 2rem;
+		.close-sidebar{
+			display: block;
+			padding: 1rem 0;
+			border-bottom: 1px solid #fff;
+			color: #fff;
+			text-align: center;
+			&:first-child{
+				border-top: 1px solid #fff;
+			}
+		}
+	}
+}
+
+
 
 .modal-content{
 	background: #f1f1f1;
@@ -608,6 +634,7 @@ a{
 	}
 }
 
+
 @keyframes up-down {   
   0% {     
     transform: translateY(-3px);
@@ -625,6 +652,7 @@ a{
 		padding-right: 7px;
 	 	animation: up-down 1s ease infinite;
 	}
+	z-index: 999;
 	color: #fff;
 	text-transform: uppercase;
 	font-size: .8rem;

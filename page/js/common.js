@@ -21,24 +21,36 @@ const vm = new Vue({
 		  })
 
 		  $('form').submit(function (e) {
-	    let form_data = $(this).serialize();
-	    $.ajax({
-	        type: "POST",
-	        url: "feedback.php",
-	        data: form_data,
-	        success: function () {
-	            $('form').trigger("reset");
-	            $('#modal').modal('hide');
-	            setTimeout(function() {
-	                $('#success').modal('show');
-	            }, 500);
-	            setTimeout(function() {
-	                $('#success').modal('hide');
-	            }, 4000);
-	        }
-	    });
-	    return false;
-		});
+		    let form_data = $(this).serialize();
+		    $.ajax({
+		        type: "POST",
+		        url: "feedback.php",
+		        data: form_data,
+		        success: function () {
+		            $('form').trigger("reset");
+		            $('#modal').modal('hide');
+		            setTimeout(function() {
+		                $('#success').modal('show');
+		            }, 500);
+		            setTimeout(function() {
+		                $('#success').modal('hide');
+		            }, 4000);
+		        }
+		    });
+		    return false;
+			});
+
+			$( document ).ready( function() {
+        $( "#sidebar" ).simplerSidebar( {
+      		align: 'left',
+      		init: 'closed',
+          selectors: {
+            trigger: "#toggle-sidebar",
+            quitter: ".close-sidebar"
+          }
+        } );
+    } );
+
 		})
 	}
 });
