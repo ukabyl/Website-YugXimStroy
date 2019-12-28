@@ -64,15 +64,22 @@ a{
 	}
 }
 
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before{
+	background: #fff;
+	width: 25px;
+	height: 3px;
+}
+
 #sidebar{
 	background: $accent;
 	position: relative;
+	padding-top: .5rem;
 	.sidebar-trigger{
 		color: #fff !important;
 		font-size: 1rem;
 		position: absolute;
-		top: 5px;
-		right: 15px;
+		top: 8px;
+		right: 0;
 	}
 	.sidebar-wrapper{
 		padding: 3rem 15px 2rem;
