@@ -22,12 +22,7 @@
 		}
 		&__tab{
 			margin-top: 2rem;
-			overflow-y: scroll;
-			-ms-overflow-style: none;
-			overflow: -moz-scrollbars-none;
-			/* хром, сафари */
-			&::-webkit-scrollbar { width: 0; }
-			align-items: center;
+			
 		}
 	}
 	.product{
@@ -82,8 +77,9 @@
 	.production-tab{
 		&__item{
 			text-align: center;
-			padding: .5rem 1.5rem;
+			padding: .5rem 1rem;
 			font-size: .9rem;
+			width: 100%;
 			&:before{
 				content: none;
 			}

@@ -5,6 +5,9 @@ const vm = new Vue({
 	},
 	mounted() {
 		this.$nextTick(function() {
+	
+			const vm = this;
+
 			// *****************************************Anchor
       $(".anchor").on("click", function (event) {
           event.preventDefault();
@@ -49,7 +52,29 @@ const vm = new Vue({
             quitter: ".close-sidebar"
           }
         } );
-    } );
+    	});
+
+    	let productionTab = $('.production__tab');
+      let productionTabSettings = {
+          slidesToShow: 1,
+          infinite: false,
+          prevArrow: '<button type="button" class="arrow slick-prev">&#9668;</button>',
+          nextArrow: '<button type="button" class="arrow slick-next">&#9658;</button>',
+      };
+      productionTab.on('afterChange', function(event, slick, currentSlide){
+          vm.product = currentSlide+1;
+      });
+      $(window).on('resize load', function(){
+          if($(window).width() > 1200){
+              if(productionTab.hasClass('slick-initialized')){
+                  productionTab.slick('unslick')
+              }
+              return 0;
+          }
+          if(!productionTab.hasClass('slick-initialized')){
+              return productionTab.slick(productionTabSettings)
+          }
+      });
 
 		})
 	}
