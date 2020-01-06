@@ -22,7 +22,8 @@
 		}
 		&__tab{
 			margin-top: 2rem;
-			
+			overflow-x: scroll;
+			height: 90px;
 		}
 	}
 	.product{
@@ -75,15 +76,17 @@
 		}
 	}
 	.production-tab{
+		align-items: center;
+		padding-bottom: 0;
+		margin-bottom: 2rem;
+
 		&__item{
 			text-align: center;
 			padding: .5rem 1rem;
-			font-size: .9rem;
+			font-size: .8rem;
 			width: 100%;
-			background: $accent;
-			color: #fff;
 			&:before{
-				content: none;
+				
 			}
 			&:hover{
 				color: #fff;
