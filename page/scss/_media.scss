@@ -90,6 +90,9 @@
 			height: 60px;
 			display: flex;
 			align-items: center;
+			.nowrap{
+				white-space: nowrap;
+			}
 			&:before{
 				
 			}
