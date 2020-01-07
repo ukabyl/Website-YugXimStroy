@@ -68,6 +68,21 @@ a{
 	right: 0;
 }
 
+#modal{
+	.modal-content{
+		padding: 3rem 2rem 1rem;
+		position: relative;
+	}
+	.form__input{
+		padding: 1rem .5rem;
+	}
+	.close{
+		position: absolute;
+		right: 10px;
+		top: 8px;
+	}
+}
+
 #success{
 	.modal-content{
 		max-width: 320px;
