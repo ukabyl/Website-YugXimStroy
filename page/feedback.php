@@ -3,7 +3,7 @@
 $site = "yugxs.xsoft.kz";
 $senderMail = "noreply.yugxs.kz@gmail.com";
 $senderMailPass = "Password123123";
-$adminMail = "umkabylbekov@gmail.com";
+$adminMail = "scbuild@mail.ru";
 
 if((isset($_POST['name'])&&$_POST['name']!="") && (isset($_POST['phone'])&&$_POST['phone']!=""))
 
