@@ -501,6 +501,7 @@ a{
 		cursor: pointer;
 		transition: $speed all ease;
 		position: relative;
+		text-align: center;
 		&:before{
 			content: '';
 			display: block;
